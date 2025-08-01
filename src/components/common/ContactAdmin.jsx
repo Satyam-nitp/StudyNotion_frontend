@@ -38,7 +38,7 @@ const ContactAdmin = () => {
 
       const response = await apiConnector(
         "POST",
-        "http://localhost:4000/api/v1/reach/contactAdmin",
+        "https://studynotion-backend-og5b.onrender.com/api/v1/reach/contactAdmin",
         dataToSend
       );
 
