@@ -26,7 +26,7 @@ function Catalog() {
         const category_id = res?.data?.allCategories?.filter(
           (ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName
         )[0]._id
-        console.log("Category ID: ", category_id)
+        // console.log("Category ID: ", category_id)
         setCategoryId(category_id)
       } catch (error) {
         console.log("Could not fetch Categories.", error)
@@ -38,7 +38,7 @@ function Catalog() {
       ; (async () => {
         try {
           const res = await getCatalogPageData(categoryId)
-          console.log("res: ", res);
+          // console.log("res: ", res);
           setCatalogPageData(res)
         } catch (error) {
           console.log(error)

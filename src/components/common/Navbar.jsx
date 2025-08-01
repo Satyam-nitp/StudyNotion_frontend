@@ -40,8 +40,8 @@ function Navbar() {
       setLoading(true);
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API);
-        console.log(res);
-        toast.success("categories fetched successfully");
+        // console.log(res);
+        // toast.success("categories fetched successfully");
         setSubLinks(res.data?.allCategories);
       } catch (error) {
         console.log("Could not fetch Categories.", error);
