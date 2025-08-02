@@ -114,7 +114,8 @@ export function deleteProfile(token, navigate) {
     } catch (error) {
       console.log("DELETE_PROFILE_API API ERROR............", error);
       toast.error("Could Not Delete Profile");
+    } finally {
+      toast.dismiss(toastId);
     }
-    toast.dismiss(toastId);
   };
 }
