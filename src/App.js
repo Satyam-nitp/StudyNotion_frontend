@@ -108,11 +108,17 @@ function App() {
             </PrivateRoute>
           }
         >
-          <Route path="dashboard/my-profile" element={<MyProfile />} />
-          <Route path="dashboard/Settings" element={<Settings />} />
+          <Route path="dashboard/my-profile" element={<PrivateRoute>
+              <MyProfile/>
+            </PrivateRoute>} />
+          <Route path="dashboard/Settings" element={<PrivateRoute>
+              <Settings/>
+            </PrivateRoute>} />
           <Route
             path="dashboard/enrolled-courses"
-            element={<EnrolledCourses />}
+            element={<PrivateRoute>
+              <EnrolledCourses/>
+            </PrivateRoute>}
           />
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
