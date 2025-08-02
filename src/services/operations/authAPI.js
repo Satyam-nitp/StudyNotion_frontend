@@ -179,7 +179,8 @@ export function logout(navigate) {
     dispatch(resetCart());
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    toast.dismiss();
     toast.success("Logged Out");
-    navigate("/");
+    if(navigate) navigate("/");
   };
 }
